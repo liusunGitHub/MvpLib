@@ -10,16 +10,18 @@ import com.lovego.mvplib.MvpControler;
 
 public interface ISplshActivityContract {
     interface Iview extends IMvpView{
-        void setTvTimer();
+        void setTvTimer(String s);
     }
 
 
-    interface IPresenter extends ILifeCircle{}
+    interface IPresenter extends ILifeCircle{
+        void setData();
+    }
 
     Iview emptyView = new Iview() {
 
         @Override
-        public void setTvTimer() {
+        public void setTvTimer(String s) {
 
         }
 

@@ -1,5 +1,6 @@
 package com.lovego.mvplib.splsh;
 
+import android.content.Intent;
 import android.util.Log;
 
 import com.lovego.mvplib.IMvpView;
@@ -20,6 +21,20 @@ public class SplshTimerPresenter extends BaseMvpPresenter<ISplshActivityContract
     public void onDestroy() {
         super.onDestroy();
         Log.i("SplshTimerPresenter", "重写onDestroy");
+    }
+
+    @Override
+    public void onNewIntent(Intent intent) {
+
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+    }
+
+    public void setData(){
+        getView().setTvTimer("1234");
     }
 
     @Override

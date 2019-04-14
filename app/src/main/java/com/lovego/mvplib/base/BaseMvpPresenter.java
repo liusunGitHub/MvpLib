@@ -11,16 +11,11 @@ import com.lovego.mvplib.presenter.LifeCircleMvpPresenter;
  * Created by lgs on 2019/4/7.
  */
 
-public class BaseMvpPresenter<T extends IMvpView> extends LifeCircleMvpPresenter<T> {
+public abstract class BaseMvpPresenter<T extends IMvpView> extends LifeCircleMvpPresenter<T> {
 
 
     public BaseMvpPresenter(IMvpView iMvpView) {
         super(iMvpView);
-    }
-
-    @Override
-    protected T getEmptyView() {
-        return null;
     }
 
     @Override
@@ -55,10 +50,6 @@ public class BaseMvpPresenter<T extends IMvpView> extends LifeCircleMvpPresenter
 
     }
 
-    @Override
-    public void attachView(IMvpView iMvpView) {
-
-    }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {

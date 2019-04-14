@@ -13,6 +13,7 @@ import java.util.Set;
  */
 
 public class MvpControler implements ILifeCircle {
+    //保存的是P层的集合
     private Set<ILifeCircle> lifeCircles = new HashSet<>();
 
     public void savePresenter(ILifeCircle iLifeCircle) {
